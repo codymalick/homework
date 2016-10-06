@@ -1,0 +1,56 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.75in]{geometry}
+\usepackage{tikz}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\begin{document}
+
+  \title{Stats 314, Data Analysis \#1}
+  \author{Cody Malick\\
+  \texttt{malickc@oregonstate.edu}}
+  \date{\today}
+  \maketitle
+
+\section*{Part I}
+\subsection*{a}
+Uniform distribution, because it is continuous, each time has an equal
+probability, and distribution. This is a property unique to uniform
+distributions.
+
+\subsection*{b}
+Poisson distribution, because we are given an average rate over a discrete
+random variable. 
+
+\subsection*{c}
+Exponentional distribution, we're given a continuous random variable with an
+average rate $(8)$, while also being given a skew indicating an exponential
+distribution.
+
+\subsection*{d}
+Binomial distribution, as we are given a set of independent events, two 
+possible outcomes, a probability of failure $(.25)$ and through that success
+$(.75)$. 
+
+\subsection*{e}
+Normal distribution, as we are given an average value $(6)$, the standard
+deviation from that value $(.6)$, and are told that values farther from the
+median value are less likely. This describes a typical bell curve. 
+
+\section*{Part II}
+\subsection*{a}
+\includegraphics[scale=.1]{tree}
+
+\subsection*{b}
+To get the probability of a ticket, we have to use the law of total probability
+to calculate the combined probability of getting a ticket in each area given
+that they are in operation.
+
+\noindent L1: $ .2*.5=.1 $\\
+L2: $ .1*.4=.04 $\\
+L3: $ .5*.6=.3 $\\
+L4: $ .2*.3=.06 $\\
+\\
+P(ticket)=$ .1+.04+.3+.06=.5$
+
+\end{document}
