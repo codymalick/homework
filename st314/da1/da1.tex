@@ -3,6 +3,7 @@
 \usepackage[margin=0.75in]{geometry}
 \usepackage{tikz}
 \usepackage{graphicx}
+\usepackage{amsmath}
 \graphicspath{{images/}}
 \begin{document}
 
@@ -39,7 +40,7 @@ median value are less likely. This describes a typical bell curve.
 
 \section*{Part II}
 \subsection*{a}
-\includegraphics[scale=.1]{tree}
+\includegraphics[scale=.075]{tree}
 
 \subsection*{b}
 To get the probability of a ticket, we have to use the law of total probability
@@ -96,7 +97,88 @@ of success.\\
 $E(X)=4*.5=2$, which is our most likely number of heads/tails.
 
 \section*{Part IV}
+\subsection*{a}
+To verify the distribution $f(x)$, we can simply integrate the two equations
+from negative infinity to infinity get the range of the values we're interested
+in.\\
+
+For anything other than $0 < x < 1$, we can simply plug in zero, so that
+simplifies the problem. We can take the integral of $5(1-x)^4$, from zero
+to one because we know everything less than zero and greater than one equal
+zero.\\
+
+$\int_{-\infty}^{\infty}5(1-x)^4dx\\\\
+=\int_{0}^{1}5(1-x)^4dx\\$\\
+\\
+Using u-substitution:\\
+$5\int_{0}^{1}u^4du, u=(x-1), du=dx\\\\
+=\dfrac{5(x-1)^5}{5}=(x-1)^5\big|_0^1\\\\
+=(1-1)^5-(0-1)^5=0-(-1^5)=1$\\\\
+This answer justifies our probability mass function because the total
+probability equals 1. 
+
+\subsection*{b}
+The shape of the distribution is an inverse exponential curve. It is not,
+however, an exponential distribution. There are no $e$ values in the equation.
+Starting at five, decreasing towards zero.\\
+\includegraphics[scale=.75]{busPMF}
+\subsection*{c}
+The expected value of this distribution is $E(X)=\int_{-\infty}^{\infty}x*f(x)dx$.
+Again, we can simply take the integral from 0 to 1 because of the bounds of our
+integration.\\
+
+$E(X)=\int_{-\infty}^{\infty}x*5(x-1)^4dx\\\\
+=\int_{0}^{1}x5(x-1)^4dx = 5\int_{0}^{1}x(x-1)^4dx\\\\
+=5\int_{0}^{1}(x-1)^4*(x-1+1) = 5\int_{0}^{1}(x-1)^5 + 5\int_{0}^{1}(x-1)^4\\\\$
+Using u-substitution, where $u=x-1$:\\
+$=5\int_{0}^{1}u^5du + =5\int_{0}^{1}u^4du=\dfrac{5(x-1)^6}{6}+(x-1)^5\big|_0^1\\\\
+=(\dfrac{5(1-1)^6}{6}+(1-1)^5) - (\dfrac{5(0-1)^6}{6}+(0-1)^5 = 0 - (\dfrac{5}{6} - 1)\\\\
+=-(-\dfrac{1}{6})=\dfrac{1}{6}$\\\\
+So the expected value of our function is $\dfrac{1}{6}$
+
+\subsection*{d}
+The standard deviation of the function is: $SD=\sqrt{V(X)}$. So we need to find
+$V(X)$.\\
+$V(X)=E(X^2)-E(X) = E(X^2)-\dfrac{1}{6}\\\\
+E(X^2) =\int_{0}^{1}(x^2)5(x-1)^4dx = 5\int_{0}^{1}(x^2)(x-1)^4dx\\\\$
+
+Using u-substitution, where $u=x-1$:\\
+$=5\int_{0}^{1}u^4 (u+1)^2 = 5\int_{0}^{1}u^6+2u^5+u^4du\\\\
+=5\int_{0}^{1}u^6du+5\int_{0}^{1}2u^5du+5\int_{0}^{1}u^4du\\\\
+=5(\dfrac{(x-1)^7}{7}+\dfrac{2(x-1)^6}{6}+\dfrac{(x-1)^5}{5})\big|_0^1\\\\
+=\dfrac{5(x-1)^7}{7}+\dfrac{10(x-1)^6}{6}+(x-1)^5\big|_0^1\\\\
+=(\dfrac{5(1-1)^7}{7}+\dfrac{10(1-1)^6}{6}+(1-1)^5)-(\dfrac{5(0-1)^7}{7}+\dfrac{10(0-1)^6}{6}+(0-1)^5)\\\\
+=(0)-(\dfrac{-5}{7}+\dfrac{10}{6}-1=-(-.71428 + 1.6666 - 1) = .0476$\\\\
+
+With our $E(X^2)$ we can calculate the variance and the standard deviation:\\
+
+\noindent$V(X) = .0476-.02778 = .0198\\\\
+SD(X) = \sqrt(.0198) = .1408$
+
+\subsection*{e}
+The CDF is the integral of the PDF from 0 to x, which we can quickly calculate
+given previous work:\\\\
+$\int_{0}^{x}f(x)dx = 5\int_{0}^{x}(1-x)^4 = (x-1)^5\big|_0^x = (x-1)^5 - (0-1)^5 = (x-1)^5+1$
+
+Our CDF then is: $F(x)=(x-1)^5+1$
+
+\subsection*{f}
+We can find this quickly by plugging in $.05$ into our equation:\\
+$(.05-1)^5+1=.2262$
 
 \section*{Part V}
+\subsection*{a}
+\includegraphics[scale=.75]{elecDIST}
+\subsection*{b}
+99.7\%
+\subsection*{c}
+At 43, we are 1.5 standard deviations from the median. With that info, we can
+jump straight to the z-table. With a z-score of -1.5, or 1-zscore(1.5), then the
+answer is $.06681$
+\subsection*{d}
+To find the percentile, we have to find what zscore occurs at about .25, which
+in this case means $-.67*\sigma+\mu=-.67*2+40=38.66$
+
+
 
 \end{document}
