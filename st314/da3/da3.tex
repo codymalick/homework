@@ -56,16 +56,16 @@ did. The sample mean was almost exactly the same as the population mean, and
 the sample standard deviation was a little bit higher.
 
 \subsection*{c}
-$CI=69.88 \pm 1.96*\frac{4.066723}{\sqrt{25}}\\
-=71.47416$ and $=68.285844$\\
+$CI=69.88 \pm 1.96*\frac{4.066723}{\sqrt{25}}\\\\
+=71.47416$ and $=68.285844$\\\\
 The $95\%$ confidence interval for the height of the class is estimated to be
 between $68.2858$ and $71.4742$ inches, with a point estimate of $69.88$.
 \subsection*{d}
 To calculate the t confidence interval for mean height, we do use the following
 formua:\\
-$CI=\bar{x}\pm t^* * \frac{s}{\sqrt{n}}$\\
-$69.88 \pm 2.064*\frac{5.3254}{\sqrt{25}}$\\
-$=72.0783$ and $=67.6817$\\
+$CI=\bar{x}\pm t^* * \frac{s}{\sqrt{n}}$\\\\
+$69.88 \pm 2.064*\frac{5.3254}{\sqrt{25}}$\\\\
+$=72.0783$ and $=67.6817$\\\\
 The $95\%$ confidence interval for the height of the sample from class is
 estimated to be between $67.6817$ and $72.0783$ inches, with a point estimate
 of $69.88$.\\
@@ -79,12 +79,35 @@ that different from each other.
 
 \section*{Part III}
 \subsection*{a}
-I would anticipate that we would reject the null hypothesis as our sampled data
-from our previous measurements had a slightly different mean. I suspect it's
-enough to reject.
+I would anticipate that we would not reject the null hypothesis as our sampled
+data from our previous measurements had a slightly different mean. The mean
+difference was small enough that I suspect it's not enough to reject.
+
 \subsection*{b}
+To find the t statistic with the formula:\\\\
+$t=\frac{\bar{x}-\mu_0}{\frac{s}{\sqrt{n}}}$\\\\
+Using the values we found in part II:\\\\
+$t=\frac{69.88-69.639}{\frac{5.325}{\sqrt{256}}}$\\\\
+$t=\frac{.241}{\frac{5.325}{16}}$\\\\
+$t=.7241$\\\\
+Using this test statistic, we can find our t-value with a $DF=n-1=255$, with a
+confidence interval of $95\%$, and a significance level of $.05$. From this 
+information, we know that if our p-value (t in this case) is greater than the
+degrees of freedom at $95\%$ then we should reject. In this case:\\
+$DF=255$\\\\
+The value at that value is: $critical(100) < p < critical(1000) = 1.962 < p < 
+1.984$\\\\
+Knowing this, we can say that in order to reject the null hypothesis, the value
+would have to be less than $-1.984$ or greater than $1.984$. We can see that
+the value of $.7241$ falls in the normal bounds, so we should not reject the
+null hypothesis.
 
 \subsection*{c}
+There is not convincing evidence the average height of the students in the
+class differ from $69.6393$. The sample estimates the average time to be be 
+$69.88$ with a $95\%$ confidence interval of $67.6817$ to $72.0783$ inches. The
+null hypothesis is not rejected at a significance level of $.05$. The average
+height of the students in the class is $69.6393$ inches.
 
 
 \section*{Part IV}
