@@ -47,49 +47,49 @@ The population is 256\\
 \includegraphics[scale=.5]{student-hist}\\
 The majority of the population falls between 65 inches and 75 inches in height.
 \subsection*{b}
-$\bar{x}=69.88$\\
-$s=5.325411$\\
+$\bar{x}=69.036$\\
+$s=4.71241$\\
 \includegraphics[scale=.5]{sample-student-hist}\\
 The sample distribution isn't as radical as the population distribution was.
-Most members of the sample lie in the 60-75 range, as our population sample 
-did. The sample mean was almost exactly the same as the population mean, and
+Most members of the sample lie in the 65-75 range, with some grouping around
+60-63. The sample mean was almost exactly the same as the population mean, and
 the sample standard deviation was a little bit higher.
 
 \subsection*{c}
-$CI=69.88 \pm 1.96*\frac{4.066723}{\sqrt{25}}\\\\
-=71.47416$ and $=68.285844$\\\\
+$CI=69.036 \pm 1.96*\frac{4.71324}{\sqrt{25}}\\\\
+=70.8836$ and $=67.1884$\\\\
 The $95\%$ confidence interval for the height of the class is estimated to be
-between $68.2858$ and $71.4742$ inches, with a point estimate of $69.88$.
+between $67.1884$ and $70.8836$ inches, with a point estimate of $69.036$.
 \subsection*{d}
 To calculate the t confidence interval for mean height, we do use the following
 formua:\\
 $CI=\bar{x}\pm t^* * \frac{s}{\sqrt{n}}$\\\\
-$69.88 \pm 2.064*\frac{5.3254}{\sqrt{25}}$\\\\
-$=72.0783$ and $=67.6817$\\\\
+$69.036 \pm 2.064*\frac{4.71324}{\sqrt{25}}$\\\\
+$=70.9816$ and $=67.0904$\\\\
 The $95\%$ confidence interval for the height of the sample from class is
-estimated to be between $67.6817$ and $72.0783$ inches, with a point estimate
-of $69.88$.\\
-This interval does include the true population mean of $69.6394$.\\
+estimated to be between $67.0904$ and $70.9816$ inches, with a point estimate
+of $69.036$.\\
+This interval does include the true population mean of $69.036$.\\
 
 \subsection*{e}
 The difference between parts c and d are that, in one, we're taking the CI of
 the sample knowing what the population standard deviation is, while in part d,
-we're taking the CI not known the population SD. The two answers we got are not
-that different from each other.
+we're taking the CI without knowing the population SD. The two answers we got
+are not too different from each other.
 
 \section*{Part III}
 \subsection*{a}
-I would anticipate that we would not reject the null hypothesis as our sampled
-data from our previous measurements had a slightly different mean. The mean
-difference was small enough that I suspect it's not enough to reject.
+I would anticipate that we would reject the null hypothesis as our sampled
+data from our previous measurements had a different mean. The mean
+difference was small, but I think it was enough to reject.
 
 \subsection*{b}
 To find the t statistic with the formula:\\\\
 $t=\frac{\bar{x}-\mu_0}{\frac{s}{\sqrt{n}}}$\\\\
 Using the values we found in part II:\\\\
-$t=\frac{69.88-69.639}{\frac{5.325}{\sqrt{256}}}$\\\\
-$t=\frac{.241}{\frac{5.325}{16}}$\\\\
-$t=.7241$\\\\
+$t=\frac{69.036-69.639}{\frac{4.7124}{\sqrt{256}}}$\\\\
+$t=\frac{-.603}{\frac{4.7124}{16}}$\\\\
+$t=-2.0474$\\\\
 Using this test statistic, we can find our t-value with a $DF=n-1=255$, with a
 confidence interval of $95\%$, and a significance level of $.05$. From this 
 information, we know that if our p-value (t in this case) is greater than the
@@ -99,44 +99,106 @@ The value at that value is: $critical(100) < p < critical(1000) = 1.962 < p <
 1.984$\\\\
 Knowing this, we can say that in order to reject the null hypothesis, the value
 would have to be less than $-1.984$ or greater than $1.984$. We can see that
-the value of $.7241$ falls in the normal bounds, so we should not reject the
+the value of $-2.0474$ falls outside that range, so we should reject the
 null hypothesis.
 
 \subsection*{c}
-There is not convincing evidence the average height of the students in the
-class differ from $69.6393$. The sample estimates the average time to be be 
-$69.88$ with a $95\%$ confidence interval of $67.6817$ to $72.0783$ inches. The
-null hypothesis is not rejected at a significance level of $.05$. The average
-height of the students in the class is $69.6393$ inches.
+There is convincing evidence the average height of the students in the
+class differ from $69.6393$. The sample estimates the average height to be be 
+$69.036$ with a $95\%$ confidence interval of $67.0904$ to $70.9816$ inches. The
+null hypothesis is rejected at a significance level of $.05$. The average
+height of the students in the class is not $69.6393$ inches.
 
 
 \section*{Part IV}
 \subsection*{a}
+\includegraphics[scale=.5]{sampling}\\
+The mean is $69.62365$ and the standard deviation is $.7984$.\\
+The central limit theorem states that any sampling distribution of the mean of
+any independent, random variable will be normal or nearly normal, if the sample
+size is large enough. For our case here, this seems to be the case. The 
+distribution is nearly normal.
 
 \subsection*{b}
+\includegraphics[scale=.5]{null-dist}\\
+A normal distribution would model this set of data well. It is nearly normal.
 
 \subsection*{c}
-
+\includegraphics[scale=.5]{p-dist}\\
+This does not seem to be the case. The null hypothesis is falsely rejected 
+about $4\%$ of the time. This represents type 1 error, which is the incorrect
+rejection of true null hypothesis, or a false positive. 
 
 \section*{Part V}
 \subsection*{a}
+\includegraphics[scale=.5]{fuel-box}\\
+There is some visual evidence that the average combined fuel efficiency for the
+international car companies is slightly higher than the american average. We can
+look at the beginning and ends of the first and third quartiles and see that
+the international companies have a slightly higher average value for the
+majority of the data points in those ranges.
 
 \subsection*{b}
-
+\begin{center}
+	\begin{tabular}{l | c | c | r}
+		 & Mean CFE & SD & Sample Size \\
+		International & 23.502 & 5.766 & 581 \\
+		American & 21.79 & 4.84  & 267
+	\end{tabular}
+\end{center}
 \subsection*{c}
+Null Hypothsis: Average CFE American = Average CFE International\\
+Alt. Hypothesis: Average CFE American $\neq$ Average CFE International
 
 \subsection*{d}
+$n_1$ and $n_2$ are Random Sample: yes\\
+Populations and samples are independent: yes, American and International \\
+Populations are normal or sample sizes are large: large population size  
 
 \subsection*{e}
+To find the test statistic, we can use the formula:\\\\
+$t=\frac{\bar{X_1}-\bar{X_2}-(\delta_0)}{\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}}$\\\\
+$\delta_0=\mu_1 - \mu_2 = (23.502-21.79)-(21.79-23.502)=3.424$\\\\
+$\bar{X_1}=23.502$\\
+$\bar{X_2}=21.79$\\
+$DF=min(n_1 - 1, n_2 - 1)=min(581-1, 267-1)=min(580,266)=266$\\\\
+Knowing the above variables, we can plug them in:\\\\
+$t=\frac{(23.502-21.79)-(3.424)}{\sqrt{\frac{5.766^2}{581}+\frac{4.84^2}{267}}}$\\\\
+$t=-4.496$
 
 \subsection*{f}
+Looking up the p-value on the t table, we find that it's less than .001. We
+will use this value as it is the one we have.
 
 \subsection*{g}
-
+To find the confidence interval, we use the formula:\\\\
+$\bar{X_1}-\bar{X_2}\pm t^*\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}$\\\\
+$23.502-21.795 \pm .001 * \sqrt{\frac{5.766^2}{581}+\frac{4.84^2}{267}}$\\\\
+$=1.71258$ and $1.71182$
+Then our confidence interval of 99\% lies between $(1.71192,1.71258)$
 \subsection*{h}
+They got different confidence interval because they can calculate the exact DF,
+we only used the value at 100, the rounded value, and they can also get the
+exact p-value, which came out to .000008328 compared to my .001 value.
 
 \subsection*{i}
+There is convincing evidence that the average combined fuel efficiency of American
+cars versus International have a difference not equal to zero. The sample estimates
+the average combined fuel efficiency of International Cars to be 1.71 MPG higher,
+with a 99\% confidence interval of $1.71192$ to $1.71258$ MPG. The null hypothesis
+is rejected at a significance level of $.01$. The average international car has
+a higher average fuel efficiency of about 1.71 MPG. 
+
+There is convincing evidence the average height of the students in the
+class differ from $69.6393$. The sample estimates the average height to be be 
+$69.036$ with a $95\%$ confidence interval of $67.0904$ to $70.9816$ inches. The
+null hypothesis is rejected at a significance level of $.05$. The average
+height of the students in the class is not $69.6393$ inches.
+
 
 \subsection*{j}
+There is a practical difference here. About two miles per gallon difference
+can add up over a long period. If the difference was much lower, then the value
+would be less significant.
 
 \end{document}
