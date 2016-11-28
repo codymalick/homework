@@ -78,31 +78,79 @@ with 99\% confidence, we believe that the highway CO2 emissions increase
 by .5771 for each 1 increase in City CO2 emissions. 
 
 \subsection*{f}
-\includegraphics[scale=.6]{residuals}
+\includegraphics[scale=.6]{residuals}\\
+The conditions for a residual graph are:\\
+No distinct patters: Met\\
+Roughly Scattered around Zero: Met\\
+
 
 \subsection*{g}
 \includegraphics[scale=.6]{relationship}
 
 \section*{Part II}
 \subsection*{a}
+Least squared regression line: $\hat{y} = 66.325+.5771x$\\
+Plug in our value: $\hat{y} = 66.325 + .5771 * 550 = 383.73$
 
 \subsection*{b}
+Predicted: $383.73$\\
+Observed: $389$\\
+The difference between the observed and predicted is $5.27$
 
 \subsection*{c}
+The lower bound of our confidence interval is 381.1569\\
+The upper bound of our confidence interval is 386.3398\\
+The best fit for the interval is 383.7483\\
+
+The upper and lower bounds are the 99\% confidence interval range, with an
+estimated value of 383.7483.
 
 \subsection*{d}
+The lower bound of the prediction interval is 322.2737\\
+The upper bound of the prediction interval is 445.223\\
+The best fit for the prediction interval is 383.7483\
+
+The upper and lower bounds are the 99\% prediction interval range, with an
+estimated value of 383.7483.
 
 \subsection*{e}
+The difference between a prediction interval and confidence interval is the
+standard error. The standard error in a prediction interval takes into account
+the variability due to random sampling.
 
 \section*{Part III}
 \subsection*{a}
-
+\begin{center}
+	\begin{tabular}{| l | c | c | c | c | r |}
+		\hline
+		Source & Degrees of Freedom & Sum of Squares & Mean Squares & F & p-val \\ \hline
+		Regression & 3 & 0.2013 & .0671 & 15.9052 & $<.0001$\\ \hline
+		Residual & 17 & 0.0675 & .00421875  & & \\ \hline
+		Total & 20 & 0.2688 & & & \\ \hline
+	\end{tabular}
+\end{center}
 \subsection*{b}
+$R^2=\frac{SSR}{SST}=\frac{.2013}{.2688}=.7488$\\
+This value gives us the total proportion of our data that can be explained by the model.
+In this case, that's roughly 75\%
 
 \subsection*{c}
+\subsubsection*{i}
+$H_0:B_1=B_2=B_3$\\
+$H_a:$ At least one $B$ is significant
+\subsubsection*{ii}
+$F=\frac{R^2/k}{(1-R^2)/(n-(k+1)}=\frac{MSR}{MSE}=\frac{.0671}{.00421875}=15.905$\\
+Numerator degrees of freedom:3 \\
+Denominator Degrees of Freedom:17 \\
+p-value:$>.0001$ \\
+
+\subsubsection*{iii}
+There is at least one significant factor
 
 \subsection*{d}
+Least squares regression model $ = -.6799 - .00293x_1 - .00157x_2 + .06471x_3$
 
 \subsection*{e}
+$1.008747$ ppm 
 
 \end{document}
